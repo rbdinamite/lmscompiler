@@ -1,0 +1,30 @@
+Program  ProgramaTrabalho3;
+Const maxOper = 10;
+Var x,res,cont,soma: Integer;
+Procedure calculaMult;
+   var v1,v2: Integer;
+      Procedure multiplica(a,b: Integer);
+      var i: Integer;
+       begin
+          For i:=1 to b do
+             res:= res+1;
+       end
+   begin
+      Writeln("Informe 2 valores para multiplicar:");
+      Readln(v1,v2);
+      res := 0;
+      call multiplica(v1,v2);   
+   end
+begin
+   Writeln("Iniciando programa...");
+   cont := 0;
+   soma := 0;
+   Repeat
+      cont := cont + 1
+      call calculaMult;
+      Writeln("Resultado do cáculo:", res);
+      soma := soma + res;
+   end
+   Until cont > max_oper;
+   Writeln("Resultado da soma dos cálculos", soma);
+end.
